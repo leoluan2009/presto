@@ -37,17 +37,6 @@ fi
 export COMPILER_FLAGS=$(echo -n $(get_cxx_flags $CPU_TARGET))
 
 (
-  wget https://github.com/google/googletest/archive/refs/tags/v1.13.0.tar.gz &&
-  tar -zxvf v1.13.0.tar.gz &&
-  cd googletest-1.13.0 &&
-  mkdir _build &&
-  cd _build &&
-  cmake .. &&
-  make &&
-  make install
-)
-
-(
   wget http://ftp.gnu.org/pub/gnu/gperf/gperf-3.1.tar.gz &&
   tar xvfz gperf-3.1.tar.gz &&
   cd gperf-3.1 &&
